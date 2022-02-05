@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="ola1">Ola 1</h1>
-    <h1 class="ola2">Ola 2</h1>
-    <h1>Ola 3</h1>
+    <div class="container">
+        <h1 id="ola1">Ola 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro maxime animi excepturi saepe asperiores eum doloremque ipsa, voluptates, repudiandae, repellendus quam mollitia voluptatem pariatur dolore laborum natus unde quos a.</p>
+    </div>
+
+    <aside class="main-aside">
+        <ul>
+            <li><a href="#">Face</a></li>
+            <li><a href="#">insta</a></li>
+            <li><a href="#">tik</a></li>
+        </ul>
+    </aside>
+
+    <form action="fotm.php" method="post" class="main-form">
+        <div class="main-group">
+            <label for="">Nome</label>
+            <input type="text" placeholder="Escreva seu Nome">
+        </div>
+        <div class="main-group">
+            <label for="">Email</label>
+            <input type="email" placeholder="Escreva seu Nome">
+        </div>
+        <div class="main-group">
+            <label for="">Mensagem</label>
+            <textarea name="Mensagem" id=""></textarea>
+        </div>
+
+        <input type="submit" value="Envie">
+    </form>
 </body>
 </html>
