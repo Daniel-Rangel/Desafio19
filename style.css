@@ -274,6 +274,40 @@ div.banner_div figure.img img{
     justify-content: center;
 }
 
+div.card2:nth-child(2),
+div.card2:nth-child(2) h2,
+div.card2:nth-child(2) span {
+    background-color: #293145;
+    color: #fff;
+}
+
+div.card2:nth-child(2) h2{
+    font-size: 2rem;
+    position: relative;
+}
+
+div.card2:nth-child(2) h2::after{
+    content: 'PREFERIDO';
+    position: absolute;
+    font-size: 0.7rem;
+    font-weight: 300;
+    background-color: var(--cor-azulClaro);
+    width: 122px;
+    border-radius: 50px;
+    padding: 4px ;
+    left: 50%;
+    top: 44px;
+    transform: translate(-50%, 0);
+}
+
+.btn--pref{
+    padding: 4px 22px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 148px;
+}
+
 /* contato */
 
 .contato{
@@ -286,9 +320,6 @@ div.banner_div figure.img img{
 }
 
 .contato_div{
-/*     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; */
     color: #fff;
     font-size: 1.125rem;
     font-weight: 300;
@@ -337,3 +368,9 @@ footer{
     padding: 2.5rem 0;
 
 }
+
+/* 
+valor 344 da subitração de 1440 - 1096 para localizar o 135px de margin;
+como chegar no valor 135 de margin para layout da subitração 1440;
+
+*/
