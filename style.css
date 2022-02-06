@@ -273,3 +273,67 @@ div.banner_div figure.img img{
     display: flex;
     justify-content: center;
 }
+
+/* contato */
+
+.contato{
+    height: 382px;
+    background-image: linear-gradient(#2a3246b3, #2a3246b3 ), url("./img/imagem3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.contato_div{
+/*     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; */
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.contato_div p{
+    margin: 1rem auto 5rem;
+    width: 43%;
+    font-weight: 100;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    
+}
+
+form input[type="email"]{
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #fff;
+    border-bottom: 1px solid #0f9afe;
+    padding: 6px 0;
+    font-size: 1.125rem;
+}
+
+form input[type="email"]::placeholder{
+    color: #fff;
+    font-weight: 100;
+    font-size: 1.125rem;
+}
+
+.btn_form{
+    padding: 4px 30px;
+    font-weight: 500;
+    margin-left: 32px;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    color: var(--cor-azulEscuro);
+    font-size: 1.25rem ;
+    font-weight: 300;
+    padding: 2.5rem 0;
+
+}
