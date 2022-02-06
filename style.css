@@ -46,7 +46,7 @@ header{
     text-decoration: none;
     color: #fff;
     text-align: center;
-    box-shadow: 4px ​5px 8px -5px #0f9afe;
+    box-shadow: 4px ​5px 8px -5px #0f9afe;/*  ver motivo de não funcinar */
 }
 
 /* logo */
@@ -103,7 +103,7 @@ header{
 
 .banner{
     background-color: var(--fundo1);
-    height: 80vh;
+    height: 85vh;
     display: flex;
     align-items: center;
 }
@@ -127,5 +127,149 @@ div.banner_div div h1{
 
 div.banner_div figure.img img{
     display: block;
-    width: 90%;
+    width: 100%;
+}
+
+/* informações */
+
+.informacao {
+    padding: 3.5rem 0;
+    text-align: center;
+}
+
+.informacao h2{
+    font-size: 2.5rem;
+    color: var(--cor-azulEscuro);
+}
+
+.informacao > div{
+    display: flex;
+    padding: 5.0625rem;
+}
+
+.informacao .card1 h2{
+    font-size: 1.125rem;
+    margin: 1rem 0;
+}
+
+.informacao .card1 p{
+    font-size: 1rem;
+    color: #6E7275;
+    line-height: 26px;
+    font-weight: 300;
+    letter-spacing: 0.1px;
+}
+
+/* baixe */
+
+.baixe{
+    background-color: var(--fundo1);
+}
+
+.baixe_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.baixe_div > div h2{
+    font-size: 2rem;
+    color: var(--cor-azulEscuro);
+}
+
+.baixe_div > div p{
+    font-size: 16px;
+    color: var(--cor-texto);
+    font-weight: 300;
+    max-width: 456px;
+    margin: 1.5rem 0;
+    letter-spacing: 0.1px;
+    line-height: 26px;
+}
+
+.baixe_div > div div{
+    display: flex;
+    gap: 24px;
+}
+
+.baixe_div figure{
+    margin: 38px 0;
+}
+
+/* planos */
+
+.planos_div{
+    padding: 3.125rem 0;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: var(--cor-texto);
+}
+
+.planos_div h2{
+    font-size: 2.5rem;
+    color: var(--cor-azulEscuro);
+}
+
+.planos_div p{
+    margin: 1rem auto;
+    max-width: 586px;
+    letter-spacing: 0.1px;
+    line-height: 26px;
+
+}
+
+.planos_div_cards{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+.card2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 32%;
+    height: 471px;
+    background-color: var(--fundo1);
+    margin: 10px 0;
+    border-radius: 8px;
+    padding: 2.1875rem;
+    font-size: 0.9rem;
+}
+
+.card2 h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card2 span{
+    display: block;
+    font-size: 3.125rem;
+    font-weight: 700;
+    color: var(--cor-azulEscuro);
+    position: relative;
+    width: 118px;
+    margin: 0 auto;
+}
+
+.card2 span::before{
+    content: 'R$';
+    font-size: 1.25rem;
+    position: absolute;
+    left: -2px;
+    top: 8px;
+}
+
+.card2 span::after{
+    content: '/mês';
+    font-size: 1.25rem;
+    position: absolute;
+    bottom: 8px;
+}
+
+.btn--card2{
+    padding: 8px 81px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
