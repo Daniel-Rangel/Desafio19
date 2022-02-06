@@ -44,30 +44,58 @@
 
 .main-form{
     width: 25%;
-    height: 300px;
+    min-height: 300px;
     border: 1px solid #443c50;
     margin: 12px auto;
     padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    border-radius: 8px;
+    background-color: #333;
 }
 
 .main-group label{
     display: block;
     margin: 4px 0;
+    color: #eee;
 }
 
 .main-group input,
 .main-group textarea{
-    border: 2px solid #333;
+    border: none;
     width: 100%;
-    padding: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #443c50;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 .main-group textarea{
     height: 100px;
 }
 
+input[type="submit"]{
+    background-color: #17c208;
+    padding: 4px;
+    font-size: 16px;
+    margin-top: 4px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #eee;
+}
 
+.barrade_navegacao{
+    display: flex;
+    justify-content: center;
+    background-color: red;
+    gap:16px;
+    position: sticky;
+    top: 0;
+}
 
+.boxGrande{
+    width: 40%;
+    height: 800px;
+}
