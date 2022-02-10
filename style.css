@@ -99,6 +99,12 @@ header{
     color: var(--cor-texto);
     font-weight: 500;
 }
+
+/* menu Humbuguer */
+.menuHamburguer{
+    display: none;
+}
+
 /* banner */
 
 .banner{
@@ -367,6 +373,121 @@ footer{
     font-weight: 300;
     padding: 2.5rem 0;
 
+}
+
+
+/* moobile */
+@media (max-width: 600px){
+    .container{
+        width: 80%;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    /* burguer */
+    .menuHamburguer{
+        display: block;
+        width: 50px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .menuHamburguer div{
+        height: 3px;
+        width: 70%;
+        background-color: var(--cor-azulEscuro);
+    }
+
+    /* banner */
+    .banner{
+        height: 100%;
+    }
+
+    .banner_div{
+        flex-direction: column;
+    }
+
+    div.banner_div div h1 {
+        width:126%;
+        font-size: 2.4rem;
+    }
+
+    /* informação */
+    .informacao{
+        padding: 3.5rem 0 0;
+    }
+    
+    .informacao > div{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+    }
+
+    .card1{
+        margin: 28px 0;
+        max-width: 200px;
+    }
+
+    /* app */
+    .baixe_div{
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .baixe_div > div p{
+        margin: 24px auto;
+    }
+
+    .baixe_div > div div{
+        justify-content: center;
+        margin-bottom: 24px;
+    }
+
+    /* planos */
+
+    .planos_div h2{
+        margin: 40px;
+        margin-bottom: 0;
+    }
+
+    .planos_div p{
+        margin: 2rem auto;
+    }
+
+    .planos_div_cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card2{
+        width: 73%;
+    }
+
+    div.card2:nth-child(2) h2::after{
+        top: -46px;
+    }
+
+
+    /* contato */
+
+    .contato_div p{
+        margin: 1rem auto 4rem;
+        width:80%;
+    }
+    
+}
+
+@media (max-width: 480px){
+    div.banner_div div h1{
+        width: 146%;
+    }
 }
 
 /* 
