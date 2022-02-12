@@ -1,25 +1,11 @@
-const pessoa = {
-    primeroNome : "Daniel",
-    ultimoNome : "Rangel",
-    idade : 32,
-    hobbies: ["Estudar", "anime", "jogar"] 
+/* Condicionais */
+
+const sum = 1+2
+
+if( sum === 2){
+    console.log("foi")
+}else if(sum === 3){
+    console.log("foi mais um")
+}else{
+    console.log("não foi")
 }
-
-/* /* lista 
-for(p of pessoa.hobbies){
-
-    console.log(p)
-}
- */
-/* 
-const hobbi = pessoa.hobbies.filter((i)=>{
-    return i === "jogar"
-})
-
-console.log(hobbi) */
-
-
-const {primeroNome : nome1 , ultimoNome, idade, hobbies} = pessoa
-
-pessoa.cachorro = "Roy"
-
