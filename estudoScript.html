@@ -4,9 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudo escript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+        }
+        form{
+            margin: 50px auto 12px;
+            width: 30%;
+            padding: 20px;
+            background: rgb(58, 45, 45);
+            border-radius: 6px;
+            text-align: center;
+            color: #fff;
+        }
+
+        form div{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            text-align: initial;
+            font-weight: 600;
+        }
+
+        input{
+            padding: 4px;
+            border-radius: 4px;
+        }
+        input[type="button"]{
+            background-color: rgb(84, 84, 206);
+            padding: 8px;
+        }
+
+        .itens{
+            margin: 0 auto 12px;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .item{
+            background: rgb(58, 45, 45);
+            list-style: none;
+            padding: 8px;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+
+    </style>
 </head>
 <body>
     
+    <form action="">
+        <h1>Formulario</h1>
+        <div>
+            <label for="nome-js">Nome</label>
+            <input type="text" class="nome-js"placeholder="Nome">
+            <label for="email-js">Email</label>
+            <input type="email" name="email" class="email-js" placeholder="Email">
+            <input type="button" value="Enviar" class="btn-js">
+        </div>
+    </form>
+
+    <ul class="itens">
+        <li class="item"></li>
+        <li class="item"></li>
+        <li class="item"></li>
+    </ul>
+
     <script src="script.js"></script>
 </body>
 </html>
