@@ -484,13 +484,77 @@ footer{
     
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 361px){
+    .btn{
+        padding: 0.7rem;
+    } 
+    .container {
+        width: 80%;
+    }
+
     div.banner_div div h1{
         width: 146%;
+        font-size: 2rem;
+        margin-top: 62px;
+        line-height: 32px;
+    }
+
+    .informacao h2{
+        font-size: 2.2rem;
+    }
+
+
+    .planos_div h2 {
+        font-size: 2.3rem;
+        margin: 0;
+    }
+
+    .card2{
+        width: 100%;
+    }
+
+    .btn--card2{
+        margin: 0 auto;
+        display: block;
+        width: 200px;
+    }
+
+    div.card2:nth-child(2) h2::after {
+        top: -30px;
+    }
+
+    .baixe_div img{
+        width: 90%;
+    }
+
+    form{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contato_div p{
+        width: 90%
+    }
+
+    input[type="submit"].btn_form{
+        display: block;
+        max-width: 100%;
+        padding: 8px 30px;
+        margin: 0;
+    }
+
+    footer{
+        font-size: 1rem;
     }
 }
 
-/* 
+
+
+
+
+
+
+/*  
 valor 344 da subitração de 1440 - 1096 para localizar o 135px de margin;
 como chegar no valor 135 de margin para layout da subitração 1440;
 
