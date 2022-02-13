@@ -49,6 +49,16 @@ header{
     box-shadow: 4px ​5px 8px -5px #0f9afe;/*  ver motivo de não funcinar */
 }
 
+
+/* header */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
 /* logo */
 .logo{
     position: relative;
@@ -103,15 +113,48 @@ header{
 /* menu Humbuguer */
 .menuHamburguer{
     display: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.5s ease-out;
+}
+
+
+.menuHamburguer::before{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #293145;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 0 #293145;
+}
+
+.menuHamburguer.ativo::before{
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 0 #293145;
+}
+
+.menuHamburguer::after{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #293145;
+    transform: translateY(10px);
+}
+
+.menuHamburguer.ativo::after{
+    transform: translateY(0px) rotate(-45deg);
 }
 
 /* banner */
 
 .banner{
     background-color: var(--fundo1);
-    height: 85vh;
-    display: flex;
-    align-items: center;
 }
 
 .banner div.banner_div{
@@ -133,7 +176,7 @@ div.banner_div div h1{
 
 div.banner_div figure.img img{
     display: block;
-    width: 100%;
+    width: 90%;
 }
 
 /* informações */
@@ -376,31 +419,22 @@ footer{
 }
 
 
-/* moobile */
-@media screen and (max-width: 768px){
+/* tela pequena */
+@media screen and (max-width: 1024px){
+    .container{
+        width: 90%;
+    }
+
+    div.banner_div figure.img img{
+        margin-left: auto;
+    }
+}
+
+
+/* tablet */
+@media screen and (max-width: 870px){
     .container{
         width: 80%;
-    }
-
-    .menu{
-        display: none;
-    }
-
-    /* burguer */
-    .menuHamburguer{
-        display: block;
-        width: 50px;
-        height: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    .menuHamburguer div{
-        height: 3px;
-        width: 70%;
-        background-color: var(--cor-azulEscuro);
     }
 
     /* banner */
@@ -415,6 +449,7 @@ footer{
     div.banner_div div h1 {
         width:126%;
         font-size: 2.4rem;
+        margin-top: 60px;
     }
 
     /* informação */
@@ -423,7 +458,8 @@ footer{
     }
     
     .informacao > div{
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         padding: 3rem;
@@ -462,12 +498,13 @@ footer{
     }
 
     .planos_div_cards{
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .card2{
-        width: 73%;
+        width: 49%;
     }
 
     div.card2:nth-child(2) h2::after{
@@ -484,7 +521,66 @@ footer{
     
 }
 
-@media screen and (max-width: 361px){
+@media screen and (max-width: 700px){
+
+    .menu{
+        display: none;
+    }
+
+    .menu.menuAtivo{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -10vw;
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+
+    .menu ul{
+        background-color:var(--cor-azulClaro);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 8px;
+    }
+
+    .menu ul li{
+        width: 100%;
+        text-align: center;
+        padding: 8px;
+    }
+
+    .menu ul li a{
+        
+        color: #fff;
+    }
+
+    /* burguer */
+    .menuHamburguer{
+        width: 50px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .menuHamburguer div{
+        height: 3px;
+        width: 70%;
+        background-color: var(--cor-azulEscuro);
+    }
+
+ 
+}
+
+/* mobile */
+@media screen and (max-width: 425px ){
+    /* global */
     .btn{
         padding: 0.7rem;
     } 
@@ -492,18 +588,22 @@ footer{
         width: 80%;
     }
 
+    /* banner */
+
     div.banner_div div h1{
         width: 146%;
         font-size: 2rem;
-        margin-top: 62px;
         line-height: 32px;
     }
+
+    /* informação */
 
     .informacao h2{
         font-size: 2.2rem;
     }
 
 
+    /* planos */
     .planos_div h2 {
         font-size: 2.3rem;
         margin: 0;
@@ -527,6 +627,7 @@ footer{
         width: 90%;
     }
 
+    /* form */
     form{
         flex-direction: column;
         gap: 20px;
