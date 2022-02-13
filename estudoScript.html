@@ -29,6 +29,13 @@
             font-weight: 600;
         }
 
+        .msgErro{
+            text-transform: uppercase;
+            color: rgb(248, 212, 4);
+            font-weight: 600;
+            margin-top: 12px;
+        }
+
         input{
             padding: 4px;
             border-radius: 4px;
@@ -60,8 +67,9 @@
 </head>
 <body>
     
-    <form action="">
+    <form action="" class="myForm">
         <h1>Formulario</h1>
+        <p class="msgErro"></p>
         <div>
             <label for="nome-js">Nome</label>
             <input type="text" class="nome-js"placeholder="Nome">
@@ -72,9 +80,7 @@
     </form>
 
     <ul class="itens">
-        <li class="item"></li>
-        <li class="item"></li>
-        <li class="item"></li>
+
     </ul>
 
     <script src="script.js"></script>

@@ -1,22 +1,33 @@
-const button = document.querySelector('.btn-js')
-const namee = document.querySelector('.nome-js')
-const email = document.querySelector('.email-js')
+const nameImput = document.querySelector('.nome-js')
+const emailImput = document.querySelector('.email-js')
+const btnImput = document.querySelector('.btn-js')
+// const myForm = document.querySelector('.myForm')
+const erroMensagem = document.querySelector('.msgErro')
+const itens = document.querySelector('.itens')
 
-const itens = document.querySelectorAll('.item')
+btnImput.addEventListener('click', (e)=>{
+    e.preventDefault()
 
-// click recebe 2 parametros um o evento e outro uma função
-button.addEventListener('click', (e)=>{
-    e.preventDefault() // impede o envio pelo form quando usado input type="button"
-    
-    const nameV = namee.value
-    const emailV = email.value
+    const nameValue = nameImput.value
+    const emailValue = emailImput.value
 
-    if( nameV === "" || emailV === ""){
-        return console.log("Não tem valores")
+    if(nameValue === '' || emailValue === ''){
+        erroMensagem.innerText = "Prencha os campos abaixo"
+
+        setTimeout(()=>{
+            erroMensagem.innerText = ''
+        },3000 )
+        return;
     }
-    
-    console.log(nameV)
-    itens.firstElementChild.textContent = nameV
-    itens.children[1].textContent = emailV
-})
 
+    if(nameValue !== '' || emailValue !== ''){
+        const li = document.createElement('li')
+
+        li.classList = 'item'
+        li.innerHTML = `Nome: ${nameValue},<br/> Email: ${emailValue}`
+        itens.appendChild(li)
+
+        nameImput.value = ''
+        emailImput.value  = ''
+    }
+})
