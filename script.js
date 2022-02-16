@@ -44,38 +44,40 @@ const resposta = document.querySelector('.resposta-js')
 
 /* calculo */
 const calculoIMC = (altura , peso)=> {
-    const calculo =   peso / (altura * altura) 
+    const converterAltura = altura / 100
     
-    if(calculo < 16){
-       return 'Magreza grave' + ' ' + calculo.toFixed(2)
+    const IMC =   peso / (converterAltura * converterAltura) 
+    
+    if(IMC < 16){
+       return 'Magreza grave' + ' ' + IMC.toFixed(2)
     }
 
-    if(calculo <= 16 || calculo < 17){
-        return 'Magreza moderada' + ' ' + calculo.toFixed(2)
+    if(IMC <= 16 || IMC < 17){
+        return 'Magreza moderada' + ' ' + IMC.toFixed(2)
     }
 
-    if(calculo <= 17 || calculo < 18.5){
-        return 'Magreza Leve' + ' ' + calculo.toFixed(2)
+    if(IMC <= 17 || IMC < 18.5){
+        return 'Magreza Leve' + ' ' + IMC.toFixed(2)
     }
 
-    if(calculo <= 18.5 || calculo < 25){
-        return 'Saudável' + ' ' + calculo.toFixed(2)
+    if(IMC <= 18.5 || IMC < 25){
+        return 'Saudável' + ' ' + IMC.toFixed(2)
     }
 
-    if(calculo <= 25 || calculo < 30){
-        return 'Sobrepeso' + ' ' + calculo.toFixed(2)
+    if(IMC <= 25 || IMC < 30){
+        return 'Sobrepeso' + ' ' + IMC.toFixed(2)
     }
 
-    if(calculo <= 30 || calculo < 35){
-        return 'Obesidade Grau I' + ' ' + calculo.toFixed(2)
+    if(IMC <= 30 || IMC < 35){
+        return 'Obesidade Grau I' + ' ' + IMC.toFixed(2)
     }
 
-    if(calculo <= 35 || calculo < 40){
-        return 'Obesidade Grau II' + ' ' + calculo.toFixed(2)
+    if(IMC <= 35 || IMC < 40){
+        return 'Obesidade Grau II' + ' ' + IMC.toFixed(2)
     }
 
-    if(calculo >= 40){
-        return 'Obesidade Grau III' + ' ' + calculo.toFixed(2)
+    if(IMC >= 40){
+        return 'Obesidade Grau III' + ' ' + IMC.toFixed(2)
     }
     
 }
