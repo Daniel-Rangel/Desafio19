@@ -11,7 +11,8 @@
             box-sizing: border-box;
             border: none;
         }
-        form{
+        form,
+        .IMC_calc{
             margin: 50px auto 12px;
             width: 30%;
             padding: 20px;
@@ -40,9 +41,11 @@
             padding: 4px;
             border-radius: 4px;
         }
-        input[type="button"]{
+        input[type="button"],
+        .IMC_calc .calc_btn {
             background-color: rgb(84, 84, 206);
             padding: 8px;
+            border-radius: 4px;
         }
 
         .itens{
@@ -62,12 +65,18 @@
             font-weight: 600;
         }
 
-
+        .IMC_calc form{
+            width: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
     </style>
 </head>
 <body>
     
-    <form action="" class="myForm">
+ <!--    <form action="" class="myForm">
         <h1>Formulario</h1>
         <p class="msgErro"></p>
         <div>
@@ -82,7 +91,16 @@
     <ul class="itens">
 
     </ul>
-
+ -->
+    <section class="IMC_calc">
+        <h2>Calculo do IMC</h2>
+        <form>
+            <input type="text" class="input_calc altura-js" placeholder="Altura">
+            <input type="text" class="input_calc peso-js" placeholder="Peso">
+            <button class="calc_btn">Calcular</button>
+        </form>
+        <p class="resposta-js"></p>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
